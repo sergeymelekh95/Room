@@ -8,8 +8,12 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto'; 
 }
 
 .container {
@@ -51,9 +55,15 @@ body {
     height: auto;
 }
 
-.content {
+.header-content {
     max-width: 1440px;
-    width: 98%;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.main-content {
+    max-width: 1327px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -83,6 +93,7 @@ body {
     height: 60px;
     border: 1px solid transparent;
     transition: 0.3s;
+    margin: 0 0 0 65px;
 }
 
 .header-logo:hover {
@@ -112,12 +123,12 @@ body {
     width: 100%;
 }
 
-.buy {
+.showroom-container {
     display: flex;
     gap: 46px;
 }
 
-.buy img {
+.showroom-container img {
     width: 23px;
     height: auto;
 }
@@ -272,32 +283,32 @@ body {
 
 /*------------- benefit---------------- */
 
-.benefit {
+.explore {
     margin: 0 0 237px 0;
 }
 
-.benefit > img {
+.explore > img {
     width: 100%;
     height: auto;
 }
 
-.benefit-content {
+.explore-content {
     margin: 0 auto;
     max-width: 1090px;
     width: 98%;
 }
 
-.benefit-text {
+.explore-text {
     margin: 119px 0 59px 0;
 }
 
-.benefit__title {
+.explore__title {
     max-width: 1177px;
     line-height: 56px;
     margin: 0 0 40px 0;
 }
 
-.benefit__link {
+.explore__link {
     font-size: 14px;
     letter-spacing: 0.75px;
     color: #46856E;
@@ -305,11 +316,11 @@ body {
     text-transform: uppercase;
 }
 
-.benefit__link:hover {
+.explore__link:hover {
     color: #000000;
 }
 
-.benefit-container {
+.explore-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -516,25 +527,32 @@ body {
     color: #AAAAAA;
 }
 
-
-
-
 .footer {
     margin: 79px 0 0 0;
     background-color: #2B2B2B;
 }
 
 .footer-content {
-    max-width: 1376px;
+    max-width: 1200px;
     width: 98%;
     margin: 0 auto;
     padding: 97px 0 51px 0;
     display: flex;
     justify-content: space-between;
+    gap: 35px;
     color: #FFFFFF;
 }
 
-.footer-logo {
+.footer-logo img {
+    transition: 0.3s;
+}
+
+.footer-logo img {
+    border: 1px solid transparent;
+}
+
+.footer-logo img:hover {
+    border: 1px solid #FFFFFF;
 }
 
 .footer-list-container {
@@ -666,8 +684,8 @@ body {
     background: url(./images/footer/check.svg) no-repeat;
     background-size: 28px 26px;
     position: absolute;
-    top: 0;
-    left: -49px;
+    top: 2px;
+    left: -48px;
     z-index: 2;
     opacity: 0;
     transition: opacity 0.1s linear;
@@ -684,6 +702,10 @@ body {
 @media only screen and (max-width : 1280px) {}
 
 @media only screen and (max-width : 1024px) {
+    .header-logo {
+        margin: 0;
+    }
+
     .about-text {
         flex-direction: column;
         text-align: center;
@@ -700,6 +722,10 @@ body {
     .footer-content {
         flex-wrap: wrap;
     }
+
+    .form {
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width : 800px)  {
@@ -710,6 +736,10 @@ body {
         position: fixed;
         width: 100%;
         z-index: 2;
+    }
+
+    .header-content {
+        width: 100%;
     }
 
     .icon-burger {
@@ -724,7 +754,15 @@ body {
         bottom: 100%;
         overflow: hidden;
         width: auto;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .menu a {
+        color: #FFFFFF;
+    }
+
+    .link_hover::after {
+        background: #FFFFFF;
     }
 
     .menu-list {
@@ -740,12 +778,16 @@ body {
         display: none;
     }
 
-    .buy {
-        gap: 0;
+    .showroom-container {
+        gap: 10px;
+    }
+
+    .main {
+        margin: 218px 0 0 0;
     }
 
     .about img {
-        margin: 218px 0 82px 0;
+        margin: 0 0 82px 0;
     }
 
     .title {
@@ -771,6 +813,14 @@ body {
         font-size: 16px;
     }
 
+    .products {
+        margin: 0 0 90px 0;
+    }
+
+    .explore {
+        margin: 0 0 90px 0;
+    }
+
     .partner {
         display: none;
     }
@@ -781,9 +831,23 @@ body {
         align-items: center;
     }
 
+    .job {
+        margin: 0 0 90px 0;
+    }
+
+    .job > img {
+        margin: 90px 0 0 0;
+    }
+
     .job-text {
         font-size: 33px;
         line-height: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
     }
 }
 
@@ -805,7 +869,17 @@ body {
     }
 }
 
-@media only screen and (max-width : 533px)  {}
+@media only screen and (max-width : 533px)  {
+    .label__checkbox::before {
+        left: 0;
+        top: -27px;
+    }
+    
+    .label__checkbox::after {
+        top: -26px;
+        left: 1px;
+    }
+}
 
 @media only screen and (max-width : 360px)  {}
 
