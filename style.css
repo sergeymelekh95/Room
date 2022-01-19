@@ -23,8 +23,9 @@ body {
 }
 
 .header {
-    text-transform: uppercase;
     border-bottom: 1px solid #E0E0E0;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 .header-contact {
@@ -37,7 +38,6 @@ body {
     align-items: center;
     gap: 25px;
     min-height: 40px;
-    font-size: 12px;
     letter-spacing: 1px;
 }
 
@@ -55,16 +55,13 @@ body {
     height: auto;
 }
 
-.header-content {
-    max-width: 1440px;
-    width: 93%;
+.header-content, .main-content {
     margin: 0 auto;
 }
 
-.main-content {
-    max-width: 1327px;
-    width: 100%;
-    margin: 0 auto;
+.header-content {
+    max-width: 1440px;
+    width: 93%;
 }
 
 .header-container {
@@ -77,8 +74,6 @@ body {
 }
 
 .header-container a {
-    font-size: 12px;
-    letter-spacing: 2px;
     color: #000000;
 }
 
@@ -139,7 +134,6 @@ body {
     gap: 10px;
 }
 
-
 .line {
     display: block;
     margin: 5px;
@@ -179,17 +173,18 @@ body {
 
 .main {
     flex-grow: 1;
+    font-size: 24px;
 }
 
-/* --------------------about--------------------- */
-
-.about {
-    margin: 0 0 211px 0;
+.main-content {
+    max-width: 1327px;
 }
+
+
+/* ----section-about---- */
 
 .about img {
     width: 100%;
-    height: auto;
     margin: 48px 0 82px 0;
 }
 
@@ -215,12 +210,11 @@ body {
 }
 
 .subtitle {
-    font-size: 24px;
     line-height: 40px;
     color: #AAAAAA;
 }
 
-/*--------------- products --------------------*/
+/*----section-products----*/
 
 .products {
     display: flex;
@@ -229,9 +223,7 @@ body {
     flex-wrap: wrap;
     gap: 24px;
     margin: 0 0 244px 0;
-}
-
-.card {
+    padding: 211px 0 0 0;
 }
 
 .card img {
@@ -245,26 +237,20 @@ body {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.subtitle__card {
-    font-size: 24px;
+.subtext__card {
     line-height: 28px;
     color: #1A1A1A;
 }
 
-/* -------------partner------------ */
+/* ----section-partner---- */
 
 .partner {
     text-align: center;
     margin: 0 0 239px 0;
 }
 
-.partner__title {
-}
-
 .partner__subtitle {
     color: #4A4A4A;
-    font-size: 24px;
-    line-height: 36px;
     margin: 27px 0 125px 0;
 }
 
@@ -277,11 +263,8 @@ body {
     gap: 65px;
     margin: 0 auto;
 }
-.partner-container img {
-    flex: 0 0 auto;
-}
 
-/*------------- benefit---------------- */
+/*----section-explore---- */
 
 .explore {
     margin: 0 0 237px 0;
@@ -289,7 +272,6 @@ body {
 
 .explore > img {
     width: 100%;
-    height: auto;
 }
 
 .explore-content {
@@ -298,14 +280,9 @@ body {
     width: 98%;
 }
 
-.explore-text {
-    margin: 119px 0 59px 0;
-}
-
 .explore__title {
+    margin: 119px 0 40px 0;
     max-width: 1177px;
-    line-height: 56px;
-    margin: 0 0 40px 0;
 }
 
 .explore__link {
@@ -317,14 +294,13 @@ body {
 }
 
 .explore__link:hover {
-    color: #000000;
+    color: #283f36;
 }
 
 .explore-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    padding: 59px 0 0 0;
 }
 
 .item {
@@ -334,6 +310,7 @@ body {
     margin:  0 auto;
     padding: 10px;
     transition: box-shadow 0.3s;
+    line-height: 24px;
 }
 
 .item img {
@@ -347,22 +324,19 @@ body {
 }
 
 .item__title {
-    font-size: 24px;
-    line-height: 24px;
     color: #1A1A1A;
     margin: 18px 0 26px 0;
 }
 
 .item__subtitle {
     font-size: 16px;
-    line-height: 24px;
     color: #AAAAAA;
 }
 
-/* -------------------reviews---------------- */
+/* ----section-reviews---- */
 
 .reviews {
-    background: url(./images/main/woman/woman.jpg) 50% / cover no-repeat;
+    background: url(./images/main/reviews/woman.jpg) 50% / cover no-repeat;
     margin: 0 0 240px 0;
 }
 
@@ -374,18 +348,19 @@ body {
     margin: 0 0 0 185px;
 }
 
-.reviews-container a {
+.reviews__link {
+    font-size: 16px;
     letter-spacing: 0.75px;
     color: #FFFFFF;
     transition: color 0.2s;
 }
 
-.reviews-container a:hover {
+.reviews__link:hover {
     color: rgb(248, 248, 156);
 }
 
 .reviews-item {
-    max-width: 264px;
+    max-width: 208px;
 }
 
 .star-container {
@@ -404,21 +379,15 @@ body {
     color: #FFFFFF;
     margin: 7px 0 8px 0;
     line-height: 32px;
-    font-size: 24px;
 }
 
-/*--------------- job -------------------*/
+/*----section-job----*/
 
 .job {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0 286px 0;
-}
-
-.job-text {
-    font-size: 46px;
-    line-height: 52px;
+    gap: 64px;
 }
 
 .job__title {
@@ -428,7 +397,8 @@ body {
 
 .job__subtitle {
     margin: 25px 0 135px 0;
-    color: #000000;
+    font-size: 48px;
+    line-height: 35px;
 }
 
 .job-item {
@@ -437,7 +407,6 @@ body {
     max-width: 1200px;
     align-items: center;
     justify-content: space-around;
-    margin: 0 0 64px 0;
     gap: 10px;
 }
 
@@ -472,11 +441,14 @@ body {
     height: auto;
 }
 
-/* -----------------shop------------- */
+/* -----section-shop---- */
 
 .shop {
+    padding: 286px 0 0 0;
+}
+
+.shop-content {
     max-width: 1200px;
-    width: 100%;
     min-height: 465px;
     background-color: #F2F2F2;
     border-radius: 2px;
@@ -485,6 +457,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    text-align: center;
 }
 
 .shop__title {
@@ -496,9 +469,15 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
     margin: 70px 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+.shop-item {
+    font-size: 12px;
+    letter-spacing: 0.75px;
 }
 
 .shop-item img {
@@ -519,9 +498,14 @@ body {
     letter-spacing: 2px;
     padding: 24px 0;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.shop-subtext {
+.shop__button:hover {
+    background: #35564a;
+}
+
+.shop__subtext {
     font-size: 12px;
     line-height: 14px;
     color: #AAAAAA;
@@ -603,6 +587,8 @@ body {
     max-width: 369px;
     display: flex;
     flex-direction: column;
+    min-height: 452px;
+    position: relative;
 }
 
 .form__text {
@@ -641,8 +627,9 @@ body {
     color: #FFFFFF;
     font-size: 14px;
     letter-spacing: 2.3px;
-    text-align: end;
-    margin: 58px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 35px;
 }
 
 .checkbox {
@@ -719,6 +706,11 @@ body {
     .about__subtitle {
         max-width: 1000px;
     }
+
+    .partner-container {
+        gap: 10px;
+    }
+
     .footer-content {
         flex-wrap: wrap;
     }
@@ -780,6 +772,7 @@ body {
 
     .showroom-container {
         gap: 10px;
+        margin: 0 5px 0 0;
     }
 
     .main {
@@ -791,16 +784,13 @@ body {
     }
 
     .title {
-        font-size: 33px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 35px;
     }
 
     .subtitle {
         font-size: 20px;
-    }
-
-    .about {
-        margin: 0 0 130px 0;
+        line-height: 27px;
     }
 
     .card img {
@@ -809,20 +799,21 @@ body {
         margin: 0 0 9px 0;
     }
 
-    .subtitle__card {
+    .subtext__card {
         font-size: 16px;
     }
 
     .products {
         margin: 0 0 90px 0;
+        padding: 145px 0 0 0;
     }
 
     .explore {
         margin: 0 0 90px 0;
     }
 
-    .partner {
-        display: none;
+    .explore-container {
+        padding: 130px 0 0 0;
     }
 
     .reviews-container {
@@ -831,17 +822,21 @@ body {
         align-items: center;
     }
 
-    .job {
-        margin: 0 0 90px 0;
+    .reviews {
+        margin: 0 0 100px 0;
     }
 
     .job > img {
-        margin: 90px 0 0 0;
+        margin: 50px 0 0 0;
     }
 
-    .job-text {
-        font-size: 33px;
-        line-height: 40px;
+    .job__subtitle {
+        font-size: 30px;
+        line-height: 55px;
+    }
+
+    .shop {
+        padding: 130px 0 0 0;
     }
 
     .footer-content {
@@ -852,12 +847,12 @@ body {
 }
 
 @media only screen and (max-width : 600px)  {
-    .benefit {
-        display: none;
-    }
-
     .job-item {
         flex-wrap: wrap-reverse;
+    }
+
+    .partner {
+        display: none;
     }
 
     .job-item:nth-child(3) {
@@ -866,6 +861,10 @@ body {
 
     .job-item img {
         width: 90%;
+    }
+
+    .job-item-text {
+        text-align: center;
     }
 }
 
