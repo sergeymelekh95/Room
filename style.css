@@ -126,6 +126,7 @@ body {
 .showroom-container img {
     width: 23px;
     height: auto;
+    cursor: pointer;
 }
 
 .location {
@@ -258,6 +259,14 @@ body {
     margin: 0 auto;
     max-width: 1144px;
     max-height: 327px;
+}
+
+.partner-container img {
+    transition: 0.2s;
+}
+
+.partner-container img:hover {
+    transform: scale(1.1);
 }
 
 /* ----explore-block---- */
@@ -635,13 +644,19 @@ body {
     bottom: 0;
     right: 35px;
     display: block;
+    transition: 0.2s;
     border: none;
+    border-bottom: 1px solid transparent;
     background-color: transparent;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 2.3px;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.form__button:hover {
+    border-bottom: 1px solid #ffffff;
 }
 
 .checkbox {
