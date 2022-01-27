@@ -683,7 +683,7 @@ body {
     z-index: 1;
     left: -50px;
     display: block;
-    transition: background 0.1s linear;
+    transition: 0.1s;
     border: 1px solid rgba(255, 255, 255, 0.5);
     width: 28px;
     height: 26px;
@@ -697,7 +697,7 @@ body {
     left: -48px;
     display: block;
     opacity: 0;
-    transition: opacity 0.1s linear;
+    transition: 0.1s;
     background-image: url(./images/footer/check.svg);
     background-repeat: no-repeat;
     background-size: 28px 26px;
